@@ -1,0 +1,127 @@
+#product_main_div {
+  background-color: white;
+  // border: 2px solid brown;
+  overflow: hidden;
+}
+#prod_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "cat1 cat2 add1"
+    "cat3 cat3 cat3"
+    "cat4 cat4 cat4"
+    "cat5 cat6 cat7"
+    "cat8 cat8 cat8";
+  gap: 2%;
+  justify-content: space-around;
+  // width: 95vw;
+}
+.category_div {
+  // border: 2px dotted blueviolet;
+  // width: 48%;
+  height: fit-content;
+  //   margin: 2px;
+  //   padding: 2px;
+  #category_head {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-align: start;
+  }
+  .category_item {
+    // border: 2px dashed rgb(14, 139, 0);
+    .img_container {
+      border: solid 2px black;
+      pad: 2px;
+      justify-items: center;
+      display: flex;
+      flex-direction: column;
+      padding: 0%;
+      height: 15rem;
+      // align-items: center;
+      img {
+        width: 98%;
+        height: 200px;
+        align-self: center;
+      }
+      h2 {
+        font-size: 1.2em;
+        width: 85%;
+        height: 1em;
+        text-align: center;
+        //   height: 2.5em;
+        margin: 0%;
+        align-self: center;
+        // border: 2px solid skyblue;
+        overflow: hidden;
+      }
+    }
+  }
+}
+#add1 {
+  // border: 2px solid red;
+  padding: 100px;
+  grid-area: add1;
+}
+[class^="men"],
+.jewelery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // width: 30%;
+  .img_container {
+    width: 90%;
+    height: 95%;
+    img {
+      width: 98%;
+      // height: 50%;
+    }
+  }
+}
+.electronics,
+[class^="women"] {
+  display: flex;
+  gap: 2%;
+  .img_container {
+    width: 20%;
+  }
+}
+.beauty,
+.fragrances,
+.furniture {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+}
+.groceries {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2%;
+}
+.index-0 {
+  background-color: rgb(220, 220, 69);
+  grid-area: cat1;
+}
+.index-1 {
+  grid-area: cat2;
+}
+.index-2 {
+  grid-area: cat3;
+}
+.index-3 {
+  grid-area: cat4;
+}
+.index-4 {
+  grid-area: cat5;
+}
+.index-5 {
+  grid-area: cat6;
+}
+.index-6 {
+  grid-area: cat7;
+}
+.index-7 {
+  grid-area: cat8;
+}
+.index-2 {
+  width: 100%;
+  background-color: bisque;
+}

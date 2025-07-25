@@ -1,0 +1,35 @@
+#details_main_div {
+  border: 2px solid brown;
+  display: flex;
+}
+.img_container {
+  border: 2px solid grey;
+}
+.item_details {
+  border: 2px solid grey;
+}
+h1 {
+  text-transform: capitalize;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+img {
+  border: 2px solid black;
+  width: 30rem;
+  height: 30rem;
+}
+#related_items_div {
+  border: 2px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+}
+.related_item_img {
+  width: 250px;
+  height: 200px;
+}
+.rel_item_title {
+  font-size: smaller;
+  width: 100px;
+  /* height: 10px; */
+}

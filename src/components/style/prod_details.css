@@ -2,9 +2,9 @@
   border: 2px solid brown;
   display: flex;
 }
-.img_container {
+/* .img_container {
   border: 2px solid grey;
-}
+} */
 .item_details {
   border: 2px solid grey;
 }
@@ -15,7 +15,7 @@ h1 {
   font-size: 1.5em;
 }
 img {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   width: 30rem;
   height: 30rem;
 }

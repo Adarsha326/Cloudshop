@@ -1,6 +1,5 @@
 #product_main_div {
-  background-color: white;
-  overflow: hidden;
+  height: auto;
 }
 
 #prod_container {
@@ -9,25 +8,27 @@
   grid-template-areas: "cat1 cat2 add1" "cat3 cat3 cat3" "cat4 cat4 cat4" "cat5 cat6 cat7" "cat8 cat8 cat8";
   gap: 2%;
   justify-content: space-around;
+  margin: 0 1.5em 0 1.5em;
 }
 
 .category_div {
-  height: -moz-fit-content;
-  height: fit-content;
+  height: auto;
+  margin: 0.5em;
+  box-shadow: 0px 0px 2px 1px rgb(164, 163, 163);
 }
 .category_div #category_head {
   text-transform: uppercase;
   font-size: 1.5em;
   text-align: start;
+  margin-left: 2%;
 }
 .category_div .category_item .img_container {
-  border: solid 2px black;
   pad: 2px;
   justify-items: center;
   display: flex;
   flex-direction: column;
   padding: 0%;
-  height: 15rem;
+  height: auto;
 }
 .category_div .category_item .img_container img {
   width: 98%;
@@ -37,16 +38,11 @@
 .category_div .category_item .img_container h2 {
   font-size: 1.2em;
   width: 85%;
-  height: 1em;
+  height: 1.2em;
   text-align: center;
   margin: 0%;
   align-self: center;
   overflow: hidden;
-}
-
-#add1 {
-  padding: 100px;
-  grid-area: add1;
 }
 
 [class^=men],
@@ -85,11 +81,11 @@
 .groceries {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2%;
+  width: 100%;
+  height: auto;
 }
 
 .index-0 {
-  background-color: rgb(220, 220, 69);
   grid-area: cat1;
 }
 
@@ -119,9 +115,41 @@
 
 .index-7 {
   grid-area: cat8;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.index-2 {
-  width: 100%;
-  background-color: bisque;
+#add1 {
+  padding: 100px;
+  grid-area: add1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  align-items: center;
+  background-color: rgb(168, 146, 184);
+  opacity: 85%;
+  font-weight: 200;
+}
+#add1 img {
+  width: 90%;
+  height: 18em;
+  margin-top: 2.5em;
+}
+#add1 h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: oblique;
+  font-size: 1.8zem;
+  width: 90%;
+  align-self: center;
+  margin-bottom: 0;
+  margin-top: 1.5em;
+}
+#add1 p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: italic;
+  margin-left: 1.5em;
+  margin-top: 0.5em;
+  font-size: 1.2em;
 }/*# sourceMappingURL=display_pro.css.map */

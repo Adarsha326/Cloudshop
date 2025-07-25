@@ -33,6 +33,7 @@ function Display_pro() {
   useEffect(() => {
     console.log(category_ary);
   }, [category_ary]);
+
   return (
     <div id="product_main_div">
       <div id="prod_container">
@@ -40,7 +41,7 @@ function Display_pro() {
           return (
             <div
               key={category}
-              id="category_div"
+              // id="category_div"
               className={`index-${index.toLocaleString()} category_div`}
             >
               <h2 id="category_head">{category}</h2>
@@ -77,7 +78,23 @@ function Display_pro() {
             </div>
           );
         })}
-        <div id="add1">add1</div>
+        <div id="add1" className="category_div">
+          <h3>Top Selling fragrances</h3>
+
+          {/* <img
+            src={
+              "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/1.webp"
+            }
+            alt="img"
+          /> */}
+          <img
+            src={
+              "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/2.webp"
+            }
+            alt="img"
+          />
+          <p>Calvin Klein CK One</p>
+        </div>
       </div>
     </div>
   );

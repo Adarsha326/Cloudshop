@@ -1,0 +1,33 @@
+#footer_div {
+  border: 2px solid brown;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  justify-content: space-around;
+  background-color: blueviolet;
+  /* padding-left: 0; */
+  width: 100%;
+  /* gap: 2em; */
+}
+/* .footer_section {
+  width: 25%;
+} */
+li {
+  list-style-type: none;
+}
+#foot_span_div {
+  width: 80%;
+  height: 2em;
+}
+#sub_in {
+  width: 60%;
+  height: 90%;
+  margin: 0%;
+  border: 0;
+}
+#sub_btn {
+  width: 35%;
+  height: 100%;
+  font-size: 1em;
+  align-self: center;
+}

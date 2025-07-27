@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Header from "./components/Header";
 import Cart from "./components/Cart";
 import "boxicons/css/boxicons.min.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="prod_details" element={<Prod_details></Prod_details>} />
           <Route path="cart" element={<Cart />} />
         </Routes>
+        <Footer />
       </HashRouter>
       {/* </BrowserRouter> */}
     </div>

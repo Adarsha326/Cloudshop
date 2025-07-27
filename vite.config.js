@@ -9,6 +9,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/cloud_Shop/", // 👈 very important!
+  base: "/Cloudshop/", // 👈 very important!
   plugins: [react()],
 });

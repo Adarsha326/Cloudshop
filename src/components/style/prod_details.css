@@ -2,11 +2,14 @@
   border: 2px solid brown;
   display: flex;
 }
-/* .img_container {
+.detail_img_container {
   border: 2px solid grey;
-} */
+  width: 30%;
+  height: 25em;
+}
 .item_details {
   border: 2px solid grey;
+  width: 50%;
 }
 h1 {
   text-transform: capitalize;
@@ -15,12 +18,18 @@ h1 {
   font-size: 1.5em;
 }
 img {
-  /* border: 2px solid black; */
-  width: 30rem;
-  height: 30rem;
+  border: 2px solid black;
+  /* width: 30rem; */
+  height: 90%;
 }
 #related_items_div {
   border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#related_items {
+  background-color: greenyellow;
   display: flex;
   flex-wrap: wrap;
 }

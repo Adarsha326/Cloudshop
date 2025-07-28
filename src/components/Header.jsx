@@ -6,49 +6,57 @@ function Header() {
   const [search, setSearch] = useState("");
   return (
     <div className="layout_div">
-      {/* <div className="part-A"> */}
-      <div className="logo_container">
-        <h2>Cloud Shope</h2>
-      </div>
-      <div className="search_bar">
-        <input
-          type="text"
-          name="search"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+      <div className="part-A">
+        <div className="logo_container">
+          <h2>Cloud Shope</h2>
+        </div>
+        <div className="search_bar">
+          <input
+            type="text"
+            name="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
 
-        <div className="search_logo">
-          <i className="bx bx-search-alt-2"></i>
+          <div className="search_logo">
+            <i className="bx bx-search-alt-2"></i>
+          </div>
         </div>
-      </div>
-      <div className="head-fun">
-        <Link to="/login" className="login_btn">
-          <i className="bx bx-user-plus"></i>
-          <span>Login</span>
-        </Link>
-        <div className="cart">
-          <Link to="/cart">
-            <i className="bx bx-cart"></i>
+        <div className="head-fun">
+          <Link to="/login" className="login_btn">
+            <i className="bx bx-user-plus"></i>
+            <span>Login</span>
           </Link>
+          <div className="cart">
+            <Link to="/cart">
+              <i className="bx bx-cart"></i>
+            </Link>
+          </div>
+          <i className="bx bx-menu"></i>
         </div>
-        <i className="bx bx-menu"></i>
       </div>
-      {/* </div> */}
-      {/* <div className="part-B">
-        <nav>
+      <div className="part-B">
+        <nav id="nav_bar">
           <ul>
-            <li>
+            {/* <li>
               <Link to="/">HOME</Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link to="/profile">PROFILE</Link>
-            </li>
+            </li> */}
+            <li>men's</li>
+            <li>women's</li>
+            <li>jewelery</li>
+            <li>electronics</li>
+            <li>beauty</li>
+            <li>fragrances</li>
+            <li>furniture</li>
+            <li>groceries</li>
           </ul>
         </nav>
         <Outlet />
-      </div> */}
-      <Outlet />
+      </div>
+      {/* <Outlet /> */}
     </div>
   );
 }

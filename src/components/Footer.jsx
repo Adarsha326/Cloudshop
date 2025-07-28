@@ -34,10 +34,12 @@ function Footer() {
           />
           <button id="sub_btn">Subscribe</button>
         </div>
-        <i className="bx bxl-facebook-circle"></i>
-        <i className="bx bxl-gmail"></i>
-        <i className="bx bxl-instagram"></i>
-        <i className="bx bxl-twitter"></i>
+        <div className="footer_icons">
+          <i className="bx bxl-facebook-circle"></i>
+          <i className="bx bxl-gmail"></i>
+          <i className="bx bxl-instagram"></i>
+          <i className="bx bxl-twitter"></i>
+        </div>
       </section>
     </div>
   );

@@ -1,6 +1,8 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../components/style/prod_details.css";
+import { addToCart } from "../components/cartfun";
+// import addToCart from "../components/Cart.jsx";
 
 function Prod_details() {
   // return <div>hello</div>;
@@ -18,6 +20,17 @@ function Prod_details() {
     //   console.log("true");
     // }
   }
+  // let cart_items = [];
+  const [isInCart, setIsInCart] = useState(false);
+
+  useEffect(() => {
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    const alreadyInCart = cartItems.some(
+      (cartItem) =>
+        cartItem.id === item.id && cartItem.category === item.category
+    );
+    setIsInCart(alreadyInCart);
+  }, [item]);
   return (
     <>
       <div id="details_main_div">
@@ -35,19 +48,32 @@ function Prod_details() {
             ) : null}
           </span>
           <p>{item.title + item.description}</p>
-          <button>Add to Cart</button>
+          {isInCart ? (
+            <Link to={"/cart"}>
+              <button id="cart_btn" onClick={() => addToCart(item)}>
+                {" "}
+                View cart
+              </button>{" "}
+            </Link>
+          ) : (
+            <button id="cart_btn" onClick={() => addToCart(item)}>
+              {" "}
+              Add to Cart
+            </button>
+          )}
+
           <button>Buy Now</button>
         </div>
+
         {/* Display other properties as needed */}
       </div>
-      <div id="related_items_div">
+      {/* <div id="related_items_div">
         <h2>Related Items</h2>
         <div id="related_items">
           {category_ary[item_category].map((rel_item) => {
             if (rel_item.title != item.title) {
               return (
                 <div key={rel_item.title} id="related_img">
-                  {/* <img src={rel_item.image} alt={rel_item.title} /> */}
                   <img
                     className="related_item_img"
                     src={
@@ -64,7 +90,7 @@ function Prod_details() {
             }
           })}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
